@@ -52,7 +52,8 @@ class Handler(BaseHandler):
         self.wfile.write(str.encode(str(tvitovi)))
 try:
     port = os.environ['PORT'] # 8888
-    httpd = http.server.HTTPServer(('',port), Handler)
+    print("Kreiram server")
+    httpd = http.server.HTTPServer(('', 8888), Handler)
     print("Server startovan...port: 8888")
     httpd.serve_forever()
 except:
