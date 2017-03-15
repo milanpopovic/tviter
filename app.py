@@ -53,7 +53,7 @@ class Handler(BaseHandler):
 try:
     port = os.environ["PORT"]
     print("port: ",port)
-    httpd = http.server.HTTPServer(('', port), Handler)
+    httpd = http.server.HTTPServer(('0.0.0.0', port), Handler)
     print("Server startovan...port: ",port)
     httpd.serve_forever()
 except:
