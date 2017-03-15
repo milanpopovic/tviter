@@ -1,0 +1,23 @@
+button {
+  background-color: green;
+  color: white;
+  font-size: large;
+  font-weight: bold
+}
+
+h3 {
+  color: blue;
+}
+
+h4 {
+  color: red
+}
+
+body {
+  margin-left: 10%
+} 
+
+div.inline { 
+  width: 400px;
+  color: blue;
+}
