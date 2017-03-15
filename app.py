@@ -51,7 +51,7 @@ class Handler(BaseHandler):
         self._set_headers("text/plain")
         self.wfile.write(str.encode(str(tvitovi)))
 try:
-    port = os.environ["PORT"]
+    port = int(os.environ["PORT"])
     print("port: ",port)
     httpd = http.server.HTTPServer(('0.0.0.0', port), Handler)
     print("Server startovan...port: ",port)
