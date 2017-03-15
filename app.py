@@ -51,15 +51,7 @@ class Handler(BaseHandler):
         self._set_headers("text/plain")
         self.wfile.write(str.encode(str(tvitovi)))
 try:
-    ON_HEROKU = os.environ.get('ON_HEROKU')
-    print (os.environ["PORT"])
-    if ON_HEROKU:
-    # get the heroku port
-        print (os.environ["PORT"])
-        port = int(os.environ.get("PORT", 17995))  # as per OP comments default is 17995
-    else:
-        port = 17995
-    print("Kreiram server")
+    port = os.environ["PORT"]
     httpd = http.server.HTTPServer(('', port), Handler)
     print("Server startovan...port: ",port)
     httpd.serve_forever()
