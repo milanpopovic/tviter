@@ -52,8 +52,10 @@ class Handler(BaseHandler):
         self.wfile.write(str.encode(str(tvitovi)))
 try:
     ON_HEROKU = os.environ.get('ON_HEROKU')
+    print (os.environ["HOME"])
     if ON_HEROKU:
-    # get the heroku port 
+    # get the heroku port
+        print (os.environ["HOME"])
         port = int(os.environ.get("PORT", 17995))  # as per OP comments default is 17995
     else:
         port = 8888
