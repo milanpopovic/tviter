@@ -59,7 +59,7 @@ try:
         port = 8888
     print("Kreiram server")
     httpd = http.server.HTTPServer(('', port), Handler)
-    print("Server startovan...port: 8888")
+    print("Server startovan...port: ",port)
     httpd.serve_forever()
 except:
     print("Server stopiran")
