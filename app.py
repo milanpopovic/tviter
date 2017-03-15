@@ -52,6 +52,7 @@ class Handler(BaseHandler):
         self.wfile.write(str.encode(str(tvitovi)))
 try:
     port = os.environ["PORT"]
+    print("port: ",port)
     httpd = http.server.HTTPServer(('', port), Handler)
     print("Server startovan...port: ",port)
     httpd.serve_forever()
