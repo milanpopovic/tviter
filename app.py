@@ -1,4 +1,4 @@
-import http.server, os
+import http.server, os, sys
 
 BaseHandler = http.server.BaseHTTPRequestHandler
 
@@ -51,7 +51,7 @@ class Handler(BaseHandler):
         self._set_headers("text/plain")
         self.wfile.write(str.encode(str(tvitovi)))
 try:
-    port = os.environ['PORT'] # 8888
+    #port = os.environ['PORT'] # 8888
     print("Kreiram server")
     httpd = http.server.HTTPServer(('', 8888), Handler)
     print("Server startovan...port: 8888")
