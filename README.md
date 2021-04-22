@@ -1,2 +1,2 @@
 # tviter
-Web aplikacija za privatno tvitovanje
+Web aplikacija za privatno tvitovanje.
